@@ -13,9 +13,9 @@ app.get('/',async (req,res)=>{
 // Define a route to query the external API
 app.get('/api/data', async (req, res) => {
   try {
-    const category=req.body.category;
-    const p = req.body.p;
-    const pageSize=req.body.pageSize;
+    const category=req.query.category;
+    const p = req.query.page;
+    const pageSize=req.query.pageSize;
     // Replace with the actual API URL you want to query
     const apiUrl = `https://newsapi.org/v2/top-headlines?category=${category}&apiKey=3705a1cedf15419caaa898fb5f01a905&page=${p}&pageSize=${pageSize}`;
 
