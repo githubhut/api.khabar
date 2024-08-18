@@ -17,7 +17,7 @@ app.get('/api/data', async (req, res) => {
     const p = req.query.page;
     const pageSize=req.query.pageSize;
     // Replace with the actual API URL you want to query
-    const apiUrl = `https://newsapi.org/v2/top-headlines?category=${category}&apiKey=3705a1cedf15419caaa898fb5f01a905&page=${p}&pageSize=${pageSize}`;
+    const apiUrl = `https://newsapi.org/v2/top-headlines?category=${category}&apiKey=3705a1cedf15419caaa898fb5f01a905&page=${p}&pageSize=${pageSize}&country=in`;
 
     // Make a GET request to the external API
     const response = await axios.get(apiUrl);
